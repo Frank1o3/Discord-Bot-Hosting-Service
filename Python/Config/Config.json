@@ -1,9 +1,5 @@
 {
     "Clients_Root_Dir": "Clients",
     "Clients_Root_Format": ["Clients/{1}/Config","Clients/{1}/Script"],
-    "Used": {
-        "Cogs": false,
-        "Store_Token" : true,
-        "Encrypt_Token": true
-    }
+    "Using_App_ID": true
 }

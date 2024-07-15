@@ -5,7 +5,7 @@ Well this repo was made to make it eazy to host multiple discord bots at the sam
 The script will ask you for a name and your discord bot token then it will make a dir and two files.
 The Main.py contains some base code so you can make application commands and have them sync on the bots start you can check a example [Here](https://github.com/Frank1o3/Discord-Bot-Hosting-Service/blob/main/Clients/example/Main.py)
 
-After Running the Builder script the result will be like [this](https://github.com/Frank1o3/Discord-Bot-Hosting-Service/tree/main/Clients/Test) you can look at the Main.py and Config.json to get and idea of what the end result will be.
+After Running the Builder script the result will be like [this](https://github.com/Frank1o3/Discord-Bot-Hosting-Service/tree/main/Clients/Test), and you can look at the Main.py and Config.json to get and idea of what the end result will be.
 
 # Requirements
 For you use the scripts in this repo i would recommend making a python Virtual Envirement you can do that by running `python3 -m venv venv`

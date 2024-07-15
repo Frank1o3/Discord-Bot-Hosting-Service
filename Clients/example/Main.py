@@ -22,7 +22,6 @@ try:
     with open(Path, "r") as file:
         data = load(file)
         Token = shift_decrypt(data["Token"], data["ID"])
-        print(Token)
 except JSONDecodeError as e:
     raise e
 
@@ -59,7 +58,7 @@ async def greet(interaction: discord.Interaction):
 
 @tree.command(name="ping", description="Say pong to you")
 async def ping(interaction: discord.Interaction):
-    await interaction.response.send_message("Pong!", ephemeral=True)
+    await interaction.response.send_message("Pong!")
 
 
 # Run the client

@@ -1,5 +1,0 @@
-{
-    "Clients_Root_Dir": "Clients",
-    "Clients_Root_Format": ["Clients/{1}/Config.json","Clients/{1}/Main.py"],
-    "Using_App_ID": true
-}

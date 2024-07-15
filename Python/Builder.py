@@ -23,7 +23,7 @@ while True:
 
 config_file = {"Token": Encrypted_Token, "ID": offset}
 
-Path = str(__file__)
+Path = __file__
 Path = Path.replace("Python/Scripts/Builder.py", f"Clients/{name}/")
 
 print(Path)

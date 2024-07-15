@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import random
 import json
 import os
@@ -25,6 +27,7 @@ config_file = {"Token": Encrypted_Token, "ID": offset}
 
 Path = __file__
 Path = Path.replace("Python/Scripts/Builder.py", f"Clients/{name}/")
+Path = Path.replace("./Python/Builder.py", f"Clients/{name}/")
 
 print(Path)
 

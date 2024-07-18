@@ -6,11 +6,10 @@ The script will ask you for a name and your discord bot token then it will make 
 The Main.py contains some base code so you can make application commands and have them sync on the bots start.
 
 After Running the Builder script the result will be in this structure:
-`
-    DiscordBotName/
-    ├── main.py
-    └── config.json
-`
+DiscordBotName/
+├── main.py
+└── config.json
+
 
 # Requirements
 For you use the scripts in this repo i would recommend making a python Virtual Envirement you can do that by running `python3 -m venv venv`

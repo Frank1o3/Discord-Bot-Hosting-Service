@@ -14,8 +14,20 @@ def shift_encrypt(text: str, offset: int):
 
     return result
 
-name = input("Name For You'r App: ")
-Token = input("Token of you'r Discord Bot: ")
+while True:
+    done = 0
+    name = input("Name For You'r App: ")
+    Token = input("Token of you'r Discord Bot: ")
+    print("Need Storage Dir (needs to be yes or no)", end="")
+    StorageDir = input(": ").lower()
+    if name != "":
+        done += 1
+    if Token != "":
+        done += 1
+    if StorageDir == "yes" or StorageDir == "no":
+        done += 1
+    if done > 2:
+        break
 
 while True:
     offset = random.randint(1, 546523)
@@ -30,12 +42,16 @@ Path = Path.replace("Python/Scripts/Builder.py", f"Clients/{name}/")
 Path = Path.replace("./Python/Builder.py", f"Clients/{name}/")
 
 print(Path)
+exit(0)
 
 if os.path.exists(Path):
     print("Project already Exists..")
     exit(0)
 
 os.makedirs(Path,exist_ok=True)
+
+if StorageDir == "yes":
+    pass
 
 with open(f"{Path}Config.json","w") as file:
     file.write(json.dumps(config_file))
@@ -68,6 +84,7 @@ intents = discord.Intents.default()
 intents.message_content = True
 intents.guild_reactions = True
 intents.guild_typing = True
+intents.members = True
 intents.guilds = True\n
 # Initialize the client and command tree
 Client = discord.Client(intents=intents)

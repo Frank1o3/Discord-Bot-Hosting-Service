@@ -18,13 +18,13 @@ while True:
     done = 0
     name = input("Name For You'r App: ")
     Token = input("Token of you'r Discord Bot: ")
-    print("Need Storage Dir (needs to be yes or no)", end="")
-    StorageDir = input(": ").lower()
+    print("Does your Discord Bot use Cogs (Answer needs to be yes or no)", end="")
+    Cog = input(": ").lower()
     if name != "":
         done += 1
     if Token != "":
         done += 1
-    if StorageDir == "yes" or StorageDir == "no":
+    if Cog == "yes" or Cog == "no":
         done += 1
     if done > 2:
         break
@@ -37,12 +37,9 @@ while True:
 
 config_file = {"Token": Encrypted_Token, "ID": offset}
 
-Path = __file__
-Path = Path.replace("Python/Scripts/Builder.py", f"Clients/{name}/")
+Path = str(os.path.abspath(__file__))
+Path = Path.replace("Python/Builder.py", f"Clients/{name}/")
 Path = Path.replace("./Python/Builder.py", f"Clients/{name}/")
-
-print(Path)
-exit(0)
 
 if os.path.exists(Path):
     print("Project already Exists..")
@@ -50,8 +47,10 @@ if os.path.exists(Path):
 
 os.makedirs(Path,exist_ok=True)
 
-if StorageDir == "yes":
-    pass
+if Cog == "yes":
+    os.makedirs((Path + "Cogs/"))
+    with open(f"{Path}/Cogs/example.py","w") as file:
+        file.write("""""")
 
 with open(f"{Path}Config.json","w") as file:
     file.write(json.dumps(config_file))

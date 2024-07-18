@@ -6,8 +6,9 @@ The script will ask you for a name and your discord bot token then it will make 
 The Main.py contains some base code so you can make application commands and have them sync on the bots start.
 
 After Running the Builder script the result will be in this structure:
-DiscordBotName/\n
-├── main.py\n
+DiscordBotName/
+├── main.py
+
 └── config.json
 
 
